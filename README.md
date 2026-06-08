@@ -3,5 +3,7 @@ A clean, modern personal portfolio website built to showcase my projects, skills
 
 🌐 Live Site: avinashukla960.github.io/My_Portfolio
 ✨ Features
+
 Animated loading screen with smooth intro transition
+
 Responsive design — works on desktop and mobile
