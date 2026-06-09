@@ -163,7 +163,7 @@
     .hero-content { text-align: center; margin: 0 auto; }
     .hero-content p { margin-inline: auto; }
     .hero-btns { justify-content: center; }
-    .hero-visual { order: -1; }   /* sphere on top on mobile */
+    .hero-visual { order: -1; }
     .hero-visual { min-height: 32vh; }
   }
   @media (max-width: 480px) {
@@ -288,23 +288,19 @@
   .social { width: 52px; height: 52px; border-radius: 12px; background: var(--bg-soft); border: 1px solid var(--line); display: grid; place-items: center; font-size: 1.3rem; filter: grayscale(1) brightness(1.4); transition: transform .35s var(--ease-bounce), background .35s, filter .35s; }
   .social:hover { transform: translateY(-7px) scale(1.08); background: var(--red); filter: grayscale(1) brightness(2); }
 
-  /* ===== Footer ===== */
   footer { text-align: center; padding: 36px 20px; color: var(--muted-dim); font-size: .82rem; border-top: 1px solid var(--line); }
   footer strong { color: var(--text); }
   .ph { color: var(--muted-dim); font-style: italic; }
 
-  /* back to top */
   .top-btn { position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; border-radius: 50%; background: var(--red); color: #fff; border: none; font-size: 1.2rem; cursor: pointer; z-index: 120; opacity: 0; transform: translateY(20px); transition: opacity .4s var(--ease), transform .4s var(--ease-bounce); display: grid; place-items: center; }
   .top-btn.show { opacity: 1; transform: none; }
   .top-btn:hover { transform: translateY(-4px) scale(1.08); }
 
-  /* ===== Film grain / noise overlay ===== */
   .grain { position: fixed; inset: -50%; z-index: 90; pointer-events: none; opacity: .04; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     animation: grainShift 1.2s steps(4) infinite; }
   @keyframes grainShift { 0%{transform:translate(0,0)} 25%{transform:translate(-4%,3%)} 50%{transform:translate(3%,-2%)} 75%{transform:translate(-2%,-3%)} 100%{transform:translate(2%,2%)} }
 
-  /* ===== Custom dot cursor (desktop) ===== */
   .cursor-dot { position: fixed; top:0; left:0; width: 8px; height: 8px; border-radius: 50%; background: var(--red); z-index: 400; pointer-events: none; transform: translate(-50%,-50%); transition: width .25s var(--ease), height .25s var(--ease), background .25s; }
   .cursor-ring { position: fixed; top:0; left:0; width: 38px; height: 38px; border: 1px solid rgba(225,11,31,.6); border-radius: 50%; z-index: 400; pointer-events: none; transform: translate(-50%,-50%); transition: width .3s var(--ease), height .3s var(--ease), border-color .3s, background .3s; }
   .cursor-ring.hovering { width: 58px; height: 58px; background: rgba(225,11,31,.10); border-color: var(--red-soft); }
@@ -313,13 +309,9 @@
   body.has-cursor a, body.has-cursor button { cursor: none; }
   @media (max-width: 760px), (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } body.has-cursor, body.has-cursor a, body.has-cursor button { cursor: auto; } }
 
-  /* ===== Persistent morphing dot canvas (fixed across all sections) ===== */
   #morphCanvas { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 1; pointer-events: none; }
-  /* content sits above the canvas */
   nav, section, footer, .marquee { position: relative; z-index: 2; }
 
-
-  /* ===== Word-by-word heading reveal ===== */
   .words .w { display: inline-block; overflow: hidden; vertical-align: top; }
   .words .w > span { display: inline-block; transform: translateY(110%); transition: transform .8s var(--ease); }
   .words.show .w > span { transform: none; }
@@ -327,7 +319,6 @@
   .words.show .w:nth-child(3)>span{transition-delay:.21s}.words.show .w:nth-child(4)>span{transition-delay:.29s}
   .words.show .w:nth-child(5)>span{transition-delay:.37s}
 
-  /* ===== APPLE LIQUID GLASS — applied to all cards, buttons & panels ===== */
   .skill-card, .proj-card, .ach, .blog-card, .contact-card, .stat,
   .hero-stats, .hero-content .badge, .contact-box, .marquee,
   .btn, .social, .chip, nav.scrolled, .theme-toggle, .top-btn {
@@ -337,11 +328,9 @@
     border: 1px solid var(--glass-border) !important;
     box-shadow: var(--glass-shadow);
   }
-  /* specular sheen highlight on glass cards */
   .skill-card, .proj-card, .ach, .blog-card, .contact-card, .contact-box, .hero-stats { position: relative; }
   .skill-card::after, .proj-card::after, .ach::after, .blog-card::after, .contact-card::after {
     content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:2;
-    /* thin crisp bright edge (top-left) fading away — the liquid-glass rim light */
     background:
       linear-gradient(135deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 12%),
       linear-gradient(315deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 10%);
@@ -349,17 +338,14 @@
     -webkit-mask-composite: xor; mask-composite: exclude;
     padding: 1px;
     opacity: .7; transition: opacity .45s var(--ease); }
-  /* hover: brighter glass + lift + red glow */
   .skill-card:hover, .proj-card:hover, .ach:hover, .blog-card:hover, .contact-card:hover {
     background: var(--glass-bg-hover) !important; box-shadow: var(--glass-shadow-hover);
     transform: translateY(-8px); border-color: rgba(255,255,255,0.45) !important; }
   .skill-card:hover::after, .proj-card:hover::after, .ach:hover::after, .blog-card:hover::after, .contact-card:hover::after { opacity: 1; }
   .ach:hover { transform: translateY(-8px) scale(1.02); }
 
-  /* glassy buttons (liquid pill) */
   .btn { color: var(--text) !important; }
   .btn:hover { background: var(--glass-bg-hover) !important; box-shadow: var(--glass-shadow-hover); transform: translateY(-3px); }
-  /* keep a primary red-tinted glass for the main CTA */
   .btn:not(.btn-ghost) { background: linear-gradient(180deg, rgba(225,11,31,.55), rgba(225,11,31,.30)) !important; border-color: rgba(255,120,130,.5) !important; color:#fff !important; }
   .btn:not(.btn-ghost):hover { background: linear-gradient(180deg, rgba(225,11,31,.75), rgba(225,11,31,.45)) !important; }
 
@@ -367,37 +353,28 @@
   .chip:hover { background: linear-gradient(180deg, rgba(225,11,31,.6), rgba(225,11,31,.35)) !important; border-color: rgba(255,120,130,.5) !important; color:#fff !important; }
   .social:hover, .theme-toggle:hover, .top-btn:hover { background: var(--glass-bg-hover) !important; }
 
-  /* make nav glassy always (not just scrolled) */
   nav { -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(130%) brightness(1.05); backdrop-filter: blur(var(--glass-blur)) saturate(130%) brightness(1.05); }
 
-  /* ===== Glow accents ===== */
   .head h2 .outline { transition: color .4s, -webkit-text-stroke .4s, text-shadow .4s; }
   .head:hover h2 .outline { color: var(--red); text-shadow: 0 0 30px rgba(225,11,31,.5); }
   .stat { position: relative; }
 
-  /* ===== Animated red underline links ===== */
   .blog-card a, .proj-links a { background-image: linear-gradient(var(--red),var(--red)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1px; padding-bottom: 2px; transition: background-size .35s var(--ease), color .3s; }
   .blog-card a:hover, .proj-links a:hover { background-size: 100% 1px; }
 
-  /* ===== Chip ripple ===== */
   .chip { position: relative; overflow: hidden; }
   .chip::before { content:''; position:absolute; inset:0; background: var(--red); transform: scaleX(0); transform-origin:left; transition: transform .35s var(--ease); z-index:-1; }
   .chip:hover { color:#fff; border-color: var(--red); }
   .chip:hover::before { transform: scaleX(1); }
 
-  /* ===== Section counter tag ===== */
   .head .sub { position: relative; }
 
-  /* ===== Marquee second row (reverse) ===== */
   .marquee.rev .marquee-track { animation-direction: reverse; animation-duration: 30s; }
 
-  /* ===== Stat number glow on hover ===== */
   .stat:hover b { text-shadow: 0 0 24px rgba(225,11,31,.6); }
 
-  /* ===== Magnetic wrapper ===== */
   .btn { will-change: transform; }
 
-  /* reveal */
   .reveal { opacity: 0; transform: translateY(38px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
   .reveal.show { opacity: 1; transform: none; }
   .reveal.fade-left { transform: translateX(-46px); }
@@ -409,17 +386,14 @@
   body { animation: pageIn 1s var(--ease) both; }
   @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
 
-  /* ===== Preloader / intro ===== */
   .preloader { position: fixed; inset: 0; z-index: 1000; background: #060404; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 26px; overflow: hidden; }
   .preloader.done { animation: plExit 1s var(--ease) forwards; }
   @keyframes plExit { to { transform: translateY(-100%); visibility: hidden; } }
-  /* red wipe panel that slides up behind */
   .preloader::after { content:''; position:absolute; inset:0; background: var(--red); transform: translateY(100%); z-index:-1; }
   .preloader.done::after { animation: wipeUp 1s var(--ease) forwards; }
   @keyframes wipeUp { 0%{transform:translateY(100%)} 45%{transform:translateY(0)} 100%{transform:translateY(-100%)} }
 
-  /* assembling name */
   .pl-name { display: flex; font-weight: 900; letter-spacing: 2px; font-size: clamp(2rem, 9vw, 5rem); color: var(--white); }
   .pl-name .l { display: inline-block; opacity: 0; transform: translateY(40px) rotateX(-90deg); transform-origin: bottom;
     animation: letterIn .6s var(--ease) forwards; }
@@ -430,20 +404,17 @@
   .pl-name .l:nth-child(5){animation-delay:.47s}.pl-name .l:nth-child(6){animation-delay:.55s}
   .pl-name .l:nth-child(7){animation-delay:.63s}.pl-name .l:nth-child(8){animation-delay:.71s}
 
-  /* progress counter + bar */
   .pl-bar { width: min(280px, 60vw); height: 2px; background: rgba(255,255,255,.12); position: relative; overflow: hidden; }
   .pl-bar i { position: absolute; left:0; top:0; height:100%; width:0%; background: var(--red); transition: width .2s linear; }
   .pl-pct { color: var(--muted); font-size: .8rem; letter-spacing: 3px; font-weight: 700; }
   .pl-sub { color: var(--muted-dim); font-size: .66rem; letter-spacing: 4px; text-transform: uppercase; }
   body.loading { overflow: hidden; }
 
-  /* ===== Theme toggle ===== */
   .theme-toggle { position: fixed; bottom: 24px; left: 24px; width: 48px; height: 48px; border-radius: 50%;
     background: var(--surface); border: 1px solid var(--line); color: var(--text); font-size: 1.1rem; cursor: pointer;
     z-index: 120; display: grid; place-items: center; transition: transform .35s var(--ease-bounce), background .35s, border-color .35s; }
   .theme-toggle:hover { transform: translateY(-4px) rotate(20deg); border-color: var(--red); color: var(--red-soft); }
 
-  /* light theme overrides */
   body.light {
     --bg: #f4f1f1; --bg-soft: #ece8e8; --surface: #ffffff; --line: rgba(0,0,0,0.10); --line-strong: rgba(0,0,0,0.22);
     --text: #161112; --muted: #5e5757; --muted-dim: #8f8888; --white: #161112;
@@ -475,7 +446,6 @@
 </head>
 <body class="loading">
 
-<!-- PRELOADER -->
 <div class="preloader" id="preloader">
   <div class="pl-name" aria-label="Avinash">
     <span class="l">A</span><span class="l">V</span><span class="l">I</span><span class="l">N</span><span class="l">A</span><span class="l">S</span><span class="l">H</span><span class="l deg">°</span>
@@ -492,7 +462,6 @@
 <div class="cursor-ring" id="cursorRing"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 
-<!-- NAV -->
 <nav id="nav">
   <a href="#home" class="logo">AVINASH<span>°</span></a>
   <ul class="nav-links desktop">
@@ -504,7 +473,6 @@
   <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#projects">WORK</a>
   <a href="#about">ABOUT</a>
@@ -514,7 +482,6 @@
   <a href="#contact">CONTACT</a>
 </div>
 
-<!-- HERO (split: text left, dot sphere right) -->
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-content">
@@ -527,19 +494,18 @@
         <a href="#contact" class="btn btn-ghost"><span>Contact Me</span></a>
       </div>
       <div class="hero-stats">
-        <div class="hs"><b>10+</b><span>Projects</span></div>
+        <div class="hs"><b>7+</b><span>Projects</span></div>
         <div class="sep"></div>
         <div class="hs"><b>8+</b><span>Technologies</span></div>
         <div class="sep"></div>
-        <div class="hs"><b>200+</b><span>DSA Solved</span></div>
+        <div class="hs"><b>50+</b><span>DSA Solved</span></div>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true"><!-- dot sphere rendered by the persistent #morphCanvas behind --></div>
+    <div class="hero-visual" aria-hidden="true"></div>
   </div>
   <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track" id="marquee">
     <span>WEB DEVELOPMENT</span><span class="dot">✦</span><span>UI / UX</span><span class="dot">✦</span><span>AI / ML</span><span class="dot">✦</span><span>SOFTWARE</span><span class="dot">✦</span><span>CREATIVE CODE</span><span class="dot">✦</span>
@@ -551,7 +517,6 @@
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="sec dot-left" id="about">
   <div class="container">
     <div class="head reveal">
@@ -563,9 +528,9 @@
         <p>I'm a 2nd year <strong>Computer Science Engineering</strong> student building bold ideas at the intersection of <strong>web development</strong>, <strong>AI/ML</strong>, and <strong>software engineering</strong>.</p>
         <p>I design and build clean, modern digital experiences — turning concepts into products that inspire action. Always learning, always shipping.</p>
         <div class="stats stagger">
-          <div class="stat reveal" style="--i:0"><b class="count" data-target="10" data-suffix="+">0</b><span>PROJECTS</span></div>
+          <div class="stat reveal" style="--i:0"><b class="count" data-target="7" data-suffix="+">0</b><span>PROJECTS</span></div>
           <div class="stat reveal" style="--i:1"><b class="count" data-target="8" data-suffix="+">0</b><span>TECH</span></div>
-          <div class="stat reveal" style="--i:2"><b class="count" data-target="200" data-suffix="+">0</b><span>DSA</span></div>
+          <div class="stat reveal" style="--i:2"><b class="count" data-target="50" data-suffix="+">0</b><span>DSA</span></div>
         </div>
       </div>
       <div class="about-visual reveal fade-right">
@@ -575,7 +540,6 @@
   </div>
 </section>
 
-<!-- SKILLS / SERVICES -->
 <section class="sec dot-right" id="skills">
   <div class="container">
     <div class="head reveal">
@@ -593,14 +557,13 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section class="sec dot-left" id="projects">
   <div class="container">
     <div class="head reveal">
       <div class="sub">Selected Work</div>
       <h2>Featured <span class="outline">Projects</span></h2>
     </div>
-    <p style="margin:-40px 0 42px; color:var(--muted-dim); font-size:.82rem;" class="reveal">Sample projects — replace with your real ones (links are placeholders).</p>
+    <p style="margin:-40px 0 42px; color:var(--muted-dim); font-size:.82rem;" class="reveal">Projects I've worked on .</p>
     <div class="proj-grid stagger">
       <div class="proj-card reveal" style="--i:0"><div class="proj-top"><span>📝</span></div><div class="proj-body"><h3>TaskFlow — Productivity App</h3><p>A full-stack task manager with authentication, drag-and-drop boards, and real-time sync.</p><div class="proj-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div><div class="proj-links"><a href="#" target="_blank" rel="noopener">Live Demo ↗</a><a href="#" target="_blank" rel="noopener">Code ↗</a></div></div></div>
       <div class="proj-card reveal" style="--i:1"><div class="proj-top"><span>🤖</span></div><div class="proj-body"><h3>SpamShield — ML Classifier</h3><p>A machine-learning model detecting spam with ~97% accuracy, served via a Flask web app.</p><div class="proj-tags"><span>Python</span><span>scikit-learn</span><span>Flask</span></div><div class="proj-links"><a href="#" target="_blank" rel="noopener">Live Demo ↗</a><a href="#" target="_blank" rel="noopener">Code ↗</a></div></div></div>
@@ -610,7 +573,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section class="sec dot-right" id="experience">
   <div class="container">
     <div class="head reveal">
@@ -619,13 +581,12 @@
     </div>
     <div class="timeline">
       <div class="tl-item reveal fade-left"><span class="dot"></span><time>2025 — 2029</time><h3>B.Tech in Computer Science Engineering</h3><div class="org">Jaypee University of Engineering and Technology, Guna</div><p>Pursuing my CSE degree with a focus on software development, data structures, and AI/ML fundamentals. <strong>CGPA: 8.9</strong></p></div>
-      <div class="tl-item reveal fade-left"><span class="dot"></span><time>Higher Secondary (Class 12)</time><h3>Senior Secondary — 90%</h3><div class="org">Sardar Patel Higher Secondary School</div><p>Completed Class 12 with 90% marks, building a strong foundation in mathematics and science.</p></div>
-      <div class="tl-item reveal fade-left"><span class="dot"></span><time>Secondary (Class 10)</time><h3>Secondary School — 95%</h3><div class="org">Sardar Patel Higher Secondary School</div><p>Completed Class 10 with 95% marks at the same school.</p></div>
+      <div class="tl-item reveal fade-left"><span class="dot"></span><time>Higher Secondary (Class 12)</time><h3>Senior Secondary — 90%</h3><div class="org">Sardar Patel Higher Secondary School</div><p>Completed Class 12 with 90% marks, building a strong foundation in Mathematics,Physics and Chemistry.</p></div>
+      <div class="tl-item reveal fade-left"><span class="dot"></span><time>Secondary (Class 10)</time><h3>Secondary School — 95%</h3><div class="org">Sardar Patel Higher Secondary School</div><p>Completed Class 10 with 95% marks,building a strong foundation in Mathematics and Science</p></div>
     </div>
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
 <section class="sec dot-left" id="achievements">
   <div class="container">
     <div class="head reveal">
@@ -643,14 +604,13 @@
   </div>
 </section>
 
-<!-- BLOG -->
 <section class="sec dot-right" id="blog">
   <div class="container">
     <div class="head reveal">
       <div class="sub">Writing</div>
       <h2>Latest <span class="outline">Posts</span></h2>
     </div>
-    <p style="margin:-40px 0 42px; color:var(--muted-dim); font-size:.82rem;" class="reveal">Sample posts — link these to your real articles.</p>
+    <p style="margin:-40px 0 42px; color:var(--muted-dim); font-size:.82rem;" class="reveal">My Articles </p>
     <div class="blog-grid stagger">
       <div class="blog-card reveal" style="--i:0"><time>May 2026</time><h3>How I Built My First Full-Stack App</h3><p>A beginner-friendly walkthrough of the stack, mistakes I made, and lessons learned.</p><a href="#">Read more →</a></div>
       <div class="blog-card reveal" style="--i:1"><time>Apr 2026</time><h3>Getting Started with Machine Learning</h3><p>The roadmap I followed to go from zero to training my first ML model with Python.</p><a href="#">Read more →</a></div>
@@ -659,7 +619,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="sec dot-left" id="contact">
   <div class="container">
     <div class="head reveal" style="text-align:center;">
@@ -668,6 +627,7 @@
     </div>
     <p style="text-align:center; margin:-30px auto 42px; color:var(--muted); max-width:480px;" class="reveal">I'm open to internships, collaborations, and freelance projects. Reach me through any of these — links are placeholders, replace with your real ones.</p>
     <div class="contact-grid stagger">
+
       <a class="contact-card reveal" style="--i:0" href="/cdn-cgi/l/email-protection#91f0e7f8fff0e2f9e2f9e4fafdf0a8a7a1d1f6fcf0f8fdbff2fefc">
         <span class="ci">✉️</span>
         <span class="cmeta"><b>Email</b><span><span class="__cf_email__" data-cfemail="6607100f0807150e150e130d0a075f505626010b070f0a4805090b">[email&#160;protected]</span></span></span>
@@ -704,7 +664,6 @@
 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">🌙</button>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // ===== PRELOADER =====
   (function(){
     const pl = document.getElementById('preloader');
     const bar = document.getElementById('plBar');
@@ -722,14 +681,12 @@
           pl.classList.add('done');
           document.body.classList.remove('loading');
           setTimeout(() => pl.remove(), 1100);
-        }, 450); // hold after name assembles
+        }, 450);
       }
     };
-    // start after the name letters finish assembling (~0.9s)
     setTimeout(tick, 900);
   })();
 
-  // ===== THEME TOGGLE =====
   (function(){
     const btn = document.getElementById('themeToggle');
     const saved = localStorage.getItem('theme');
@@ -741,11 +698,9 @@
     });
   })();
 
-  // year
   const y = new Date().getFullYear();
   const yEl = document.getElementById('year'); if (yEl) yEl.textContent = y;
 
-  // ===== Hero typing role =====
   (function(){
     const el = document.getElementById('typed'); if (!el) return;
     const roles = ['Web Developer', 'AI / ML Enthusiast', 'Software Engineer', 'Problem Solver', 'CSE Student'];
@@ -760,22 +715,19 @@
     type();
   })();
 
-  // burger / mobile menu
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
   burger.addEventListener('click', () => { burger.classList.toggle('active'); mobileMenu.classList.toggle('open'); });
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('active'); mobileMenu.classList.remove('open'); }));
 
-  // duplicate marquees (seamless loop)
   ['marquee','marquee2'].forEach(id => { const m = document.getElementById(id); if (m) m.innerHTML += m.innerHTML; });
 
-  // ===== Word-by-word heading reveal: wrap each word =====
   document.querySelectorAll('.head h2').forEach(h2 => {
     h2.classList.add('words');
     const nodes = Array.from(h2.childNodes);
     h2.innerHTML = '';
     nodes.forEach(node => {
-      if (node.nodeType === 3) { // text node
+      if (node.nodeType === 3) {
         node.textContent.split(/(\s+)/).forEach(part => {
           if (part.trim() === '') { h2.appendChild(document.createTextNode(part)); return; }
           const w = document.createElement('span'); w.className='w';
@@ -792,13 +744,11 @@
     wio.observe(h2);
   });
 
-  // reveal in/out
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); else e.target.classList.remove('show'); });
   }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // counters
   const cObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -810,7 +760,6 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('.count').forEach(c => cObs.observe(c));
 
-  // progress + nav + top btn
   const progress = document.getElementById('progress');
   const nav = document.getElementById('nav');
   const topBtn = document.getElementById('topBtn');
@@ -822,15 +771,12 @@
   }, { passive: true });
   topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // ===== Desktop-only rich interactions =====
   if (window.matchMedia('(pointer:fine)').matches) {
     document.body.classList.add('has-cursor');
 
-    // soft glow follower
     const glow = document.getElementById('cursorGlow');
     let gx=innerWidth/2, gy=innerHeight/2, cx=gx, cy=gy;
 
-    // custom dot + ring
     const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
     let rx=gx, ry=gy;
@@ -846,13 +792,11 @@
       requestAnimationFrame(loop);
     })();
 
-    // cursor hover state on interactive elements
     document.querySelectorAll('a, button, .chip, .skill-card, .proj-card, .ach, .blog-card, .social, .stat').forEach(el => {
       el.addEventListener('mouseenter', () => { ring.classList.add('hovering'); dot.classList.add('hovering'); });
       el.addEventListener('mouseleave', () => { ring.classList.remove('hovering'); dot.classList.remove('hovering'); });
     });
 
-    // 3D tilt on cards
     document.querySelectorAll('.skill-card, .proj-card, .ach, .blog-card').forEach(card => {
       card.style.transformStyle = 'preserve-3d';
       card.addEventListener('mousemove', e => {
@@ -864,7 +808,6 @@
       card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
 
-    // magnetic buttons
     document.querySelectorAll('.btn, .social').forEach(b => {
       b.addEventListener('mousemove', e => {
         const r = b.getBoundingClientRect();
@@ -874,32 +817,28 @@
     });
   }
 
-  // ===== Persistent Morphing Dot Object =====
   (function(){
     const canvas = document.getElementById('morphCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let DPR = Math.min(window.devicePixelRatio || 1, 2);
-    let W = 0, H = 0, S = 0; // S = base scale (size of the object)
-    const COUNT = window.innerWidth < 760 ? 1000 : 2000; // dot pool
+    let W = 0, H = 0, S = 0;
+    const COUNT = window.innerWidth < 760 ? 1000 : 2000;
 
     function resize(){
       DPR = Math.min(window.devicePixelRatio || 1, 2);
       W = canvas.width = Math.round(window.innerWidth * DPR);
       H = canvas.height = Math.round(window.innerHeight * DPR);
       S = Math.min(W, H) * (window.innerWidth < 981 ? 0.34 : 0.21);
-      buildAllTargets(); // shapes depend on size
+      buildAllTargets();
     }
 
-    // ---- the dot pool: each dot has current pos + target pos ----
     const dots = [];
     for (let i = 0; i < COUNT; i++){
       dots.push({ x: (Math.random()-.5)*W, y:(Math.random()-.5)*H, tx:0, ty:0, push:0, seed: Math.random()*6.28 });
     }
 
-    // ---------- TARGET GENERATORS (return array of {x,y} centered at 0,0) ----------
-    // 3D sphere projected to 2D point cloud (with slow auto-rotation baked at build time → we rotate live instead)
     let spherePts = null;
     function makeSphere(n){
       const out = []; const golden = Math.PI*(3-Math.sqrt(5));
@@ -908,7 +847,6 @@
       return out;
     }
 
-    // sample non-transparent pixels of rendered text/shape into n points
     function sampleDraw(drawFn, n){
       const off = document.createElement('canvas');
       const size = 400; off.width = size; off.height = size;
@@ -921,7 +859,6 @@
       for (let y=0;y<size;y+=2){ for (let x=0;x<size;x+=2){
         if (data[(y*size+x)*4+3] > 128) filled.push({x, y});
       }}
-      // pick n points (resample with wrap) centered & normalized to [-1,1]
       const out = [];
       if (!filled.length) return out;
       for (let i=0;i<n;i++){
@@ -935,7 +872,6 @@
       return sampleDraw((o,size)=>{
         o.textAlign='center'; o.textBaseline='middle';
         let fs = size*0.42; o.font = `900 ${fs}px Arial`;
-        // shrink to fit width
         while (o.measureText(txt).width > size*0.9 && fs>10){ fs-=4; o.font=`900 ${fs}px Arial`; }
         o.fillText(txt, size/2, size/2);
       }, n);
@@ -953,7 +889,6 @@
       return sampleDraw((o,size)=>{
         o.lineWidth = size*0.03; o.strokeStyle='#fff'; o.fillStyle='#fff';
         const s=size*0.34, cx=size/2, cy=size/2, d=size*0.16;
-        // front + back squares + connectors (drawn thick so pixels sample)
         function sq(ox,oy){ o.strokeRect(cx-s/2+ox, cy-s/2+oy, s, s); }
         sq(-d/2, d/2); sq(d/2,-d/2);
         o.beginPath();
@@ -972,11 +907,10 @@
       }, n);
     }
 
-    // ---- per-section shape definitions (mix of words + icons) ----
     const SHAPES = {
       home:        { kind:'sphere', side:'right' },
       about:       { kind:'text',  value:'AVINASH', side:'left'  },
-      skills:      { kind:'text',  value:'</>',    side:'right' },
+      skills:      { kind:'text',  value:'<!/>',    side:'right' },
       projects:    { kind:'cube',                  side:'left'  },
       experience:  { kind:'text',  value:'PATH',   side:'right' },
       achievements:{ kind:'star',                  side:'left'  },
@@ -994,14 +928,12 @@
         else if (s.kind==='star') targetsCache[key] = starTargets(COUNT);
         else if (s.kind==='cube') targetsCache[key] = cubeTargets(COUNT);
         else if (s.kind==='envelope') targetsCache[key] = envelopeTargets(COUNT);
-        // sphere handled live
       }
     }
 
     resize();
     window.addEventListener('resize', resize);
 
-    // ---- which section is active ----
     const sections = ['home','about','skills','projects','experience','achievements','blog','contact']
       .map(id => document.getElementById(id)).filter(Boolean);
     let current = 'home';
@@ -1019,35 +951,30 @@
     window.addEventListener('scroll', updateActive, { passive:true });
     updateActive();
 
-    // ---- mouse for hover-spread ----
     let mouse = { x:-9999, y:-9999, active:false };
     window.addEventListener('mousemove', e=>{ mouse.x=e.clientX*DPR; mouse.y=e.clientY*DPR; mouse.active=true; });
     window.addEventListener('mouseout', ()=> mouse.active=false);
 
     const isLight = ()=> document.body.classList.contains('light');
     let rotY = 0;
-    let posX = W*0.72, posY = H*0.5;     // current object center (animated)
+    let posX = W*0.72, posY = H*0.5;
 
     function frame(){
       rotY += 0.004;
       ctx.clearRect(0,0,W,H);
 
       const shape = SHAPES[current] || SHAPES.home;
-      // target center based on side (alternates per section)
-      // home sphere sits a bit more inward (it's larger); section shapes near the edges
       const tcx = shape.kind==='sphere'
         ? (window.innerWidth < 981 ? W*0.5 : W*0.70)
         : (shape.side==='left' ? W*0.24 : W*0.76);
       const tcy = H*0.5;
-      posX += (tcx - posX)*0.06;          // smooth position shift
+      posX += (tcx - posX)*0.06;
       posY += (tcy - posY)*0.06;
 
-      // build the live target list for current shape
       const cosY=Math.cos(rotY), sinY=Math.sin(rotY);
       const cosX=Math.cos(-0.35), sinX=Math.sin(-0.35);
       const targets = targetsCache[current];
 
-      // bigger object on the home page (sphere), normal size for section shapes
       const Sh = S * (shape.kind==='sphere' ? 1.6 : 1.35);
       for (let i=0;i<dots.length;i++){
         const d = dots[i];
@@ -1065,11 +992,9 @@
         d.tx = posX + tx;
         d.ty = posY + ty;
 
-        // ease current -> target (this is the smooth morph)
         d.x += (d.tx - d.x) * 0.07;
         d.y += (d.ty - d.y) * 0.07;
 
-        // hover spread
         let push = 0;
         if (mouse.active){
           const dx=d.x-mouse.x, dy=d.y-mouse.y; const dist=Math.hypot(dx,dy);
@@ -1083,7 +1008,6 @@
         }
         d.push += (push - d.push)*0.2;
 
-        // draw
         const size = Math.max(0.5, (1.0 + d.push*1.4) * DPR);
         const alpha = 0.45 + d.push*0.55;
         if (isLight()) ctx.fillStyle = `rgba(20,17,18,${alpha})`;
