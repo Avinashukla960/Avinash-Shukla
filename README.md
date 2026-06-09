@@ -9,3 +9,10 @@ Avinash Shukla — Personal Portfolio 🚀
 <img width="3072" height="1728" alt="Screenshot From 2026-06-10 00-02-11" src="https://github.com/user-attachments/assets/94b34cc2-2b08-47a3-ac21-0372d49f94a5" />
 
 A modern, responsive personal portfolio website showcasing my projects, skills, and journey as a Computer Science Engineering student.
+---
+ 
+## 🌐 Live Demo
+ 
+👉 **[https://avinashukla960.github.io/My_Portfolio/](https://avinashukla960.github.io/My_Portfolio/)**
+ 
+---
