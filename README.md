@@ -16,3 +16,9 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 👉 **[https://avinashukla960.github.io/My_Portfolio/](https://avinashukla960.github.io/My_Portfolio/)**
  
 ---
+---
+ 
+## ✨ Features
+ 
+- **Smooth Loading Animation** — Branded intro screen with progress bar
+- **Responsive Design** — Works seamlessly on desktop, tablet, and mobile
