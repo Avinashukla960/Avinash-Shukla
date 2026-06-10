@@ -29,3 +29,5 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Education & Experience Timeline** — Visual journey from school to college
 - **Awards & Certifications** — Highlights of achievements
 - **Blog Section** — Latest articles and learnings
+- **Contact Section** — All social and professional links in one place
+---
