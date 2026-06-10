@@ -26,3 +26,6 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Animated Sections** — Scroll-triggered reveals for a polished feel
 - **Featured Projects** — Showcasing full-stack, ML, and web projects
 - **Skills & Services** — Organized by category (Languages, Web, AI/ML, Databases, Tools)
+- **Education & Experience Timeline** — Visual journey from school to college
+- **Awards & Certifications** — Highlights of achievements
+- **Blog Section** — Latest articles and learnings
