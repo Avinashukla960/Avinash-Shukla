@@ -24,3 +24,4 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Responsive Design** — Works seamlessly on desktop, tablet, and mobile
 - **Dark / Light Mode Toggle** — User-friendly theme switching
 - **Animated Sections** — Scroll-triggered reveals for a polished feel
+- **Featured Projects** — Showcasing full-stack, ML, and web projects
