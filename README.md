@@ -54,3 +54,7 @@ My_Portfolio/
 ## 🚀 Getting Started
 
 To run this project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Avinashukla960/My_Portfolio.git
