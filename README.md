@@ -22,7 +22,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
  
 - **Smooth Loading Animation** — Branded intro screen with progress bar
 - **Responsive Design** — Works seamlessly on desktop, tablet, and mobile
-- **Dark / Light Mode Toggle** — User-friendly theme switching
+- **Dark / Light Mode Toggle** — User-friendly theme switching 
 - **Animated Sections** — Scroll-triggered reveals for a polished feel
 - **Featured Projects** — Showcasing full-stack, ML, and web projects
 - **Skills & Services** — Organized by category (Languages, Web, AI/ML, Databases, Tools)
