@@ -46,3 +46,5 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 ## 📁 Project Structure
 
 ```
+My_Portfolio/
+├── index.html        # Main HTML file
