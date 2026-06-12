@@ -58,3 +58,11 @@ To run this project locally:
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Avinashukla960/My_Portfolio.git
+
+# 2. Navigate into the project
+cd My_Portfolio
+
+# 3. Open in your browser
+open index.html
+# or just double-click index.html
+```
