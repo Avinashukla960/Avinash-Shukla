@@ -69,3 +69,8 @@ open index.html
 No dependencies or build steps required — it's pure HTML, CSS, and JS!
 
 ---
+---
+
+## 📬 Contact
+
+| Platform | Link |
