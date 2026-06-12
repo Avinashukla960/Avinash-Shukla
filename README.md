@@ -35,3 +35,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 
 | Category | Technologies |
 |----------|-------------|
+| Markup | HTML5 |
+| Styling | CSS3 |
+| Scripting | JavaScript |
+| Hosting | GitHub Pages |
