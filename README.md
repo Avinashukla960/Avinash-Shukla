@@ -66,3 +66,6 @@ cd My_Portfolio
 open index.html
 # or just double-click index.html
 ```
+No dependencies or build steps required — it's pure HTML, CSS, and JS!
+
+---
