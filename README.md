@@ -76,3 +76,5 @@ No dependencies or build steps required — it's pure HTML, CSS, and JS!
 |----------|------|
 | ✉️ Email | [avinashshukla960@gmail.com](mailto:avinashshukla960@gmail.com) |
 | 🐙 GitHub | [github.com/Avinashukla960](https://github.com/Avinashukla960) |
+| 💼 LinkedIn | [avinash-shukla](https://www.linkedin.com/in/avinash-shukla-9658b1375/) |
+| 🐦 Twitter / X | [@avinashukla960](https://x.com/avinashukla960) |
