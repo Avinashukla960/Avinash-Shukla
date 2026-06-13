@@ -78,3 +78,5 @@ No dependencies or build steps required — it's pure HTML, CSS, and JS!
 | 🐙 GitHub | [github.com/Avinashukla960](https://github.com/Avinashukla960) |
 | 💼 LinkedIn | [avinash-shukla](https://www.linkedin.com/in/avinash-shukla-9658b1375/) |
 | 🐦 Twitter / X | [@avinashukla960](https://x.com/avinashukla960) |
+| 🧩 LeetCode | [avinashshukla960](https://leetcode.com/u/avinashshukla960/) |
+| 📄 Resume | [View / Download](https://docs.google.com/document/d/1LNSp9qBRZmVe6mbuPbHahVp1I4C3-wx-/edit?usp=sharing) |
