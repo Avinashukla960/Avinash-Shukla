@@ -80,3 +80,10 @@ No dependencies or build steps required — it's pure HTML, CSS, and JS!
 | 🐦 Twitter / X | [@avinashukla960](https://x.com/avinashukla960) |
 | 🧩 LeetCode | [avinashshukla960](https://leetcode.com/u/avinashshukla960/) |
 
+---
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
