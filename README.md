@@ -87,3 +87,6 @@ No dependencies or build steps required — it's pure HTML, CSS, and JS!
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
+
+
+<p align="center">Designed & built with ❤️ by <strong>Avinash Shukla</strong></p>
