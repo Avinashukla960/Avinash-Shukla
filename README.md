@@ -50,6 +50,7 @@ portfolio/
 ├── index.html      # HTML markup — page structure & content (~15 KB)
 ├── style.css       # All styles — linked in <head> (~32 KB)
 ├── script.js       # All JavaScript — linked before </body> (~15 KB)
+└── favicon.png     # (optional) site icon — add your own if you have one
 
 ## 🚀 Getting Started
 
