@@ -46,9 +46,9 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 ## 📁 Project Structure
 
 ```
-My_Portfolio/
-├── index.html        # Main HTML file
-
+portfolio/
+├── index.html      # HTML markup — page structure & content (~15 KB)
+├── style.css       # All styles — linked in <head> (~32 KB)
 
 ## 🚀 Getting Started
 
