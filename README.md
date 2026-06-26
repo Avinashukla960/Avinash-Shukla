@@ -35,6 +35,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Blog Section** — Latest articles and learnings
 - **Contact Section** — All social and professional links in one place
 ---
+
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
