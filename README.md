@@ -15,7 +15,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
  
 ## 🌐 Live Demo
  
-👉 **[https://avinashukla960.github.io/My_Portfolio/]()**
+👉 **[https://avinashukla960.github.io/My_Portfolio/](https://avinashukla960.github.io/Avinash-Shukla/)**
  
 ---
 ---
