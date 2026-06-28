@@ -53,7 +53,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 ```
 portfolio/
 ├── index.html
-├── style.css       # All styles — linked in <head> (~32 KB)
+├── style.css       
 ├── script.js       # All JavaScript — linked before </body> (~15 KB)
 └── favicon.png     
 
