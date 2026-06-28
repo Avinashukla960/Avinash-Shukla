@@ -66,7 +66,7 @@ To run this project locally:
 git clone https://github.com/Avinashukla960/Avinash-Shukla.git
 
 # 2. Navigate into the project
-cd My_Portfolio
+cd Avinash+Shukla
 
 # 3. Open in your browser
 open index.html
