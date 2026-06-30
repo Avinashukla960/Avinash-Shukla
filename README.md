@@ -56,7 +56,7 @@ portfolio/
 ├── style.css       
 ├── script.js       
 └── favicon.png     
-
+```
 ## 🚀 Getting Started
 
 To run this project locally:
