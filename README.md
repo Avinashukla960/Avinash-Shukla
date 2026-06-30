@@ -72,9 +72,10 @@ git clone https://github.com/Avinashukla960/Avinash-Shukla.git
 ```bash
 cd Avinash+Shukla
 ```
-
+```bash
 # 3. Open in your browser
 open index.html
+```
 # or just double-click index.html
 
 No dependencies or build steps required — it's pure HTML, CSS, and JS!
