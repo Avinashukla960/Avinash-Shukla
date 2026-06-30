@@ -66,6 +66,8 @@ To run this project locally:
 ```bash
 git clone https://github.com/Avinashukla960/Avinash-Shukla.git
 ```
+
+```bash
 # 2. Navigate into the project
 cd Avinash+Shukla
 
