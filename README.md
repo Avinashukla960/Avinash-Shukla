@@ -61,17 +61,18 @@ portfolio/
 
 To run this project locally:
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/Avinashukla960/Avinash-Shukla.git
 
+# 1. Clone the repository
+```bash
+git clone https://github.com/Avinashukla960/Avinash-Shukla.git
+```
 # 2. Navigate into the project
 cd Avinash+Shukla
 
 # 3. Open in your browser
 open index.html
 # or just double-click index.html
-```
+
 No dependencies or build steps required — it's pure HTML, CSS, and JS!
 
 ---
