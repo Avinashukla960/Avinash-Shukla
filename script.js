@@ -37,7 +37,7 @@
 
   (function(){
     const el = document.getElementById('typed'); if (!el) return;
-    const roles = ['Web Developer', 'AI / ML Enthusiast', 'Software Engineer', 'Problem Solver', 'CSE Student'];
+    const roles = ['Full-Stack Web Developer', 'DSA Learner', 'Software Engineer', 'Problem Solver', 'CSE Student'];
     let ri = 0, ci = 0, deleting = false;
     function type(){
       const word = roles[ri];
